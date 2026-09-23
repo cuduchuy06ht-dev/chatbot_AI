@@ -1,0 +1,63 @@
+{
+  "description": "Output của T09 - Chunking. Nhận parsed blocks từ T07 (PDF Parser) và T08 (DOCX/TXT Parser), sau đó chia nội dung text thành các chunk để phục vụ các bước Embedding, Indexing và Retrieval.",
+  "input_format": {
+    "source": "T07/T08",
+    "fields": {
+      "document_id": "ID của tài liệu, giữ nguyên từ T07/T08",
+      "page": "Số trang, giữ nguyên từ T07/T08",
+      "text": "Nội dung văn bản đã được T07/T08 parse"
+    }
+  },
+  "output_format": {
+    "fields": {
+      "chunk_id": "ID duy nhất của chunk do T09 tạo",
+      "document_id": "ID tài liệu gốc, giữ nguyên từ T07/T08",
+      "page": "Số trang của nội dung gốc, giữ nguyên từ T07/T08",
+      "text": "Nội dung của chunk sau khi thực hiện chunking"
+    }
+  },
+  "chunks": [
+    {
+      "chunk_id": "1",
+      "document_id": 1,
+      "page": 1,
+      "text": "Nội dung chunk thứ nhất được tạo từ text của T07."
+    },
+    {
+      "chunk_id": "2",
+      "document_id": 1,
+      "page": 1,
+      "text": "Nội dung chunk thứ hai được tạo từ text của T07."
+    },
+    {
+      "chunk_id": "3",
+      "document_id": 1,
+      "page": 2,
+      "text": "Nội dung chunk tiếp theo được tạo từ text của T07."
+    },
+    {
+      "chunk_id": "4",
+      "document_id": 2,
+      "page": 1,
+      "text": "Nội dung chunk thứ nhất được tạo từ text của T08."
+    },
+    {
+      "chunk_id": "5",
+      "document_id": 2,
+      "page": 1,
+      "text": "Nội dung chunk thứ hai được tạo từ text của T08."
+    },
+    {
+      "chunk_id": "6",
+      "document_id": 3,
+      "page": 1,
+      "text": "Nội dung chunk thứ nhất được tạo từ text của T08."
+    },
+    {
+      "chunk_id": "7",
+      "document_id": 3,
+      "page": 1,
+      "text": "Nội dung chunk thứ hai được tạo từ text của T08."
+    }
+  ]
+}
